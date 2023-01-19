@@ -20,7 +20,7 @@ app.get("/",(req,res)=>{
 app.use("/auth",authRouter);
 
 // this is the port and shold accept the async
-app.listen(process.env.port, async () =>{
+app.listen(process.env.port || 3000, async () =>{
     try{
     await Connection
     console.log("This server is listening the 1234 port")
